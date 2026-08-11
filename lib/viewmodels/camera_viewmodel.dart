@@ -7,13 +7,15 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'camera_viewmodel.g.dart';
 
-/// Ratio largeur/hauteur cible pour une photo d'identité, mesuré sur la
-/// photo de référence fournie par l'établissement (424 × 480 px). Utilisé
+/// Ratio largeur/hauteur cible pour une photo d'identité, aligné sur le
+/// format standard 35×45 mm plutôt que sur la photo de référence
+/// (424 × 480 px, ratio 0.883) : cette dernière rendait le cadre trop
+/// étroit et obligeait à trop se rapprocher pour cadrer le sujet. Utilisé
 /// à la fois pour le cadre de prévisualisation (voir les écrans de capture
 /// et de validation) et pour le recadrage final ci-dessous : les deux
 /// doivent rester identiques pour que ce que l'agent voit à l'écran
 /// corresponde exactement au fichier envoyé.
-const idPhotoAspectRatio = 424 / 480;
+const idPhotoAspectRatio = 35 / 45;
 
 /// Largeur finale en pixels : suffisante pour une carte/badge imprimé,
 /// sans gonfler inutilement la taille du fichier uploadé.
