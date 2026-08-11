@@ -1,6 +1,6 @@
 {
-    "name": "student_photo_app",
-    "short_name": "student_photo_app",
+    "name": "Photo d'identité",
+    "short_name": "Photo d'identité",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#002B48",
